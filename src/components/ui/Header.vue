@@ -288,6 +288,15 @@ export default {
     display: none;
   }
 }
+@media (max-width: 991px) {
+  .header {
+    margin-right: 0;
+  }
+  .nav {
+    padding-right: 0;
+    background-position-x: calc(100% + 95px);
+  }
+}
 @media (max-width: 767px) {
   .bg-slider {
     max-width: 100%;
