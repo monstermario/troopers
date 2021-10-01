@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SpaceType-Regular";
+  font-weight: normal;
+  src: url("./assets/font/SpaceType-Regular.otf");
+}
+
+@font-face {
+  font-family: "SpaceType-Bold";
+  font-weight: bold;
+  src: url("./assets/font/SpaceType-Expanded.otf");
+}
+
+@font-face {
+  font-family: "IBM-Plex-Sans";
+  src: url("./assets/font/IBM-Plex-Sans.ttf.woff") format("woff"),
+    url("./assets/font/IBM-Plex-Sans.ttf.svg#IBM-Plex-Sans") format("svg"),
+    url("./assets/font/IBM-Plex-Sans.ttf.eot"),
+    url("./assets/font/IBM-Plex-Sans.ttf.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+p {
+  font-family: "IBM-Plex-Sans";
+  font-size: 18px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.main-content.router-content {
+  padding: 67px 100px;
+  min-height: calc(100vh - 172px);
+  position: relative;
+}
+.appear {
+  -webkit-animation: appear 2s ease-in;
+  animation: appear 2s ease-in;
+  /* transition-delay: 0.8s; */
+  /* min-height: 100%; */
+}
+
+h1 {
+  font-size: 80px;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(100vh);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 62px;
+  }
+  .main-img {
+    height: 32vh;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 12px;
+    margin-bottom: 16.5px;
+  }
+  .connect-btns a.btn-wallet {
+    border-width: 2px;
+    margin-right: 0;
+  }
+  .connect-btns a.btn-join {
+    display: none;
+  }
+  .main-content {
+    padding: 0 20px;
+  }
+  .main-content.router-content {
+    padding: 24px;
+    min-height: calc(100vh - 129px);
+  }
+}

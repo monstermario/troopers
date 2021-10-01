@@ -4,8 +4,14 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    userAddress: "",
+  },
+  mutations: {
+    setAddress: (state, address) => {
+      state.userAddress = address;
+    },
+  },
   actions: {},
   modules: {},
 });
