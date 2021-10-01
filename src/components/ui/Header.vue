@@ -18,11 +18,12 @@
         </h3>
         <div class="nav w-full md:ml-4 md:pr-20 flex justify-end">
           <div class="flex justify-end hidden md:block">
-            <router-link to="/">HOME BASE</router-link>
-            <router-link to="/team">TEAM</router-link>
-            <router-link to="/storyline">STORYLINE</router-link>
-            <router-link to="/collection">COLLECTION</router-link>
-            <router-link to="/roadmap">ROADMAP</router-link>
+            <router-link
+              :to="nav.url"
+              v-for="(nav, index) in navs"
+              :key="`nav-${index}`"
+              >{{ nav.title }}</router-link
+            >
           </div>
         </div>
       </div>
@@ -68,11 +69,11 @@
     </div>
     <div class="left-nav">
       <div id="leftNav">
-        <router-link to="/"></router-link>
-        <router-link to="/team"></router-link>
-        <router-link to="/storyline"></router-link>
-        <router-link to="/collection"></router-link>
-        <router-link to="/roadmap"></router-link>
+        <router-link
+          :to="nav.url"
+          v-for="(nav, index) in navs"
+          :key="`nav-${index}`"
+        ></router-link>
       </div>
     </div>
   </div>
@@ -89,10 +90,31 @@ export default {
   components: { Hamburger },
   data() {
     return {
-      // userAddress: null,
+      navs: [
+        { id: 0, url: "/", title: "HOME BASE" },
+        { id: 1, url: "/team", title: "TEAM" },
+        { id: 2, url: "/storyline", title: "STORYLINE" },
+        { id: 3, url: "/collection", title: "COLLECTION" },
+        { id: 4, url: "/roadmap", title: "ROADMAP" },
+      ],
     };
   },
+  created() {
+    window.addEventListener("wheel", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("wheel", this.handleScroll);
+  },
   methods: {
+    handleScroll(event) {
+      if (event.deltaY < 0) {
+        const index = this.navs.filter((x) => x.url === this.$route.path)[0].id;
+        this.$router.push(this.navs[(index + 4) % 5].url);
+      } else if (event.deltaY > 0) {
+        const index = this.navs.filter((x) => x.url === this.$route.path)[0].id;
+        this.$router.push(this.navs[(index + 1) % 5].url);
+      }
+    },
     async connectMetaMask() {
       try {
         if (this.isMetaMaskInstalled) {

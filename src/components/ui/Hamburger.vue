@@ -182,7 +182,7 @@ export default {
   width: 60px;
   height: 45px;
   position: absolute;
-  top: 0;
+  top: -5px;
   right: 0;
   margin-left: 5px;
   margin-top: 15px;

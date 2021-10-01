@@ -1,6 +1,6 @@
 <template>
   <div class="router-content main-content">
-    <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop playsinline id="myVideo">
       <source src="../assets/img/bg/storyline-loop-comp.mp4" type="video/mp4" />
     </video>
     <div class="storyline appear">
