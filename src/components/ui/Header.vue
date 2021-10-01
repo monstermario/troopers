@@ -142,7 +142,7 @@ export default {
   font-weight: bold;
   margin: 0 10px;
   font-size: 18px;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .nav a.router-link-exact-active {

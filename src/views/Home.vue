@@ -73,7 +73,6 @@ export default {
   name: "Home",
   data() {
     return {
-      // userAddress: this.$store.state.userAddress,
       mintAmount: 0,
     };
   },
