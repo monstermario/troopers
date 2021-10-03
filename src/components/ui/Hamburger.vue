@@ -112,7 +112,7 @@ export default {
     z-index: 2;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -174,7 +174,7 @@ export default {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }
@@ -247,7 +247,7 @@ export default {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     display: none;
   }
 }

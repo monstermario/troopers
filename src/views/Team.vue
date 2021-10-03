@@ -11,23 +11,25 @@
           to lead EtherTroopers into new realms within the Metaverse.
         </p>
 
-        <div class="team-members flex justify-start">
-          <div
-            class="member-item"
-            v-for="(member, index) in members"
-            :key="'member-' + index"
-          >
-            <div class="member-avatar">
-              <img :src="member.avatar" alt="" />
-            </div>
-            <div class="member-info">
-              <div class="flex justify-between items-center bg-white px-2">
-                <h5 :style="{ color: member.color }">{{ member.role }}</h5>
-                <h4>{{ member.name }}</h4>
+        <div class="team-members">
+          <div class="flex justify-start members">
+            <div
+              class="member-item"
+              v-for="(member, index) in members"
+              :key="'member-' + index"
+            >
+              <div class="member-avatar">
+                <img :src="member.avatar" alt="" />
               </div>
-              <p class="p-2" v-if="member.description">
-                {{ member.description }}
-              </p>
+              <div class="member-info">
+                <div class="flex justify-between items-center bg-white px-2">
+                  <h5 :style="{ color: member.color }">{{ member.role }}</h5>
+                  <h4>{{ member.name }}</h4>
+                </div>
+                <p class="p-2" v-if="member.description">
+                  {{ member.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -107,9 +109,11 @@ export default {
 p {
   max-width: 840px;
 }
-
 .team-members {
+  width: 100%;
   overflow-x: auto;
+}
+.members {
   gap: 10px;
 }
 .member-item {

@@ -16,7 +16,9 @@
     <img src="../assets/img/bg-main.png" class="main-img" alt="" v-else />
     <div class="router-content">
       <template v-if="!firstVideo">
-        <div class="home appear flex flex-col items-around md:block">
+        <div
+          class="home appear flex flex-col items-start md:items-around md:block"
+        >
           <h1
             class="mb-2 md:mb-8 flex flex-wrap justify-center md:justify-start"
           >
