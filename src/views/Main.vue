@@ -25,6 +25,7 @@ export default {
         menu: "#menu",
         anchors: ["home", "team", "storyline", "collection"],
         scrollingSpeed: 1300,
+        normalScrollElements: "#teamMembers",
       },
     };
   },

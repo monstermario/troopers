@@ -11,7 +11,7 @@
           to lead EtherTroopers into new realms within the Metaverse.
         </p>
 
-        <div class="team-members">
+        <div class="team-members" id="teamMembers">
           <div class="flex justify-start members">
             <div
               class="member-item"
