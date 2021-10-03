@@ -1,40 +1,43 @@
 <template>
-  <div class="router-content main-content">
-    <video autoplay muted playsinline loop id="myVideo">
+  <div class="main-content" id="collection">
+    <video autoplay muted playsinline loop class="myVideo">
       <source
         src="../assets/img/bg/collection-loop-comp.mp4"
         type="video/mp4"
       />
     </video>
-    <div class="collection appear">
-      <h1 class="mb-2 md:mb-6">COLLECTION</h1>
-      <p class="mb-4 md:mb-16 text-left">
-        A collection of 8,888 industry grade level EtherTroopers have been
-        assembled on the Ethereum Blockchain, all with a variety of traits and
-        rarities. Every single piece within the Troopers ranks displays superior
-        artistic quality, and is the result of hours of development, refinement
-        and contemplation. No matter what rarity level, every EtherTrooper is a
-        stunning piece of artwork with true attention to detail behind it.
-      </p>
+    <div class="router-content">
+      <div class="collection appear">
+        <h1 class="mb-2 md:mb-6">COLLECTION</h1>
+        <p class="mb-4 md:mb-16 text-left">
+          A collection of 8,888 industry grade level EtherTroopers have been
+          assembled on the Ethereum Blockchain, all with a variety of traits and
+          rarities. Every single piece within the Troopers ranks displays
+          superior artistic quality, and is the result of hours of development,
+          refinement and contemplation. No matter what rarity level, every
+          EtherTrooper is a stunning piece of artwork with true attention to
+          detail behind it.
+        </p>
 
-      <h4 class="mb-4 md:my-6">MINT PRICE: 0.1ETH</h4>
-      <div class="overflow-hidden flex">
-        <div class="collections flex">
-          <div
-            class="collection-item mx-2"
-            v-for="collection in collections"
-            :key="'collection-' + collection.id"
-          >
-            <img :src="collection.image" alt="" />
+        <h4 class="mb-4 md:my-6">MINT PRICE: 0.1ETH</h4>
+        <div class="overflow-hidden flex">
+          <div class="collections flex">
+            <div
+              class="collection-item mx-2"
+              v-for="collection in collections"
+              :key="'collection-' + collection.id"
+            >
+              <img :src="collection.image" alt="" />
+            </div>
           </div>
-        </div>
-        <div class="collections flex">
-          <div
-            class="collection-item mx-2"
-            v-for="collection in collections"
-            :key="'collection-' + collection.id"
-          >
-            <img :src="collection.image" alt="" />
+          <div class="collections flex">
+            <div
+              class="collection-item mx-2"
+              v-for="collection in collections"
+              :key="'collection-' + collection.id"
+            >
+              <img :src="collection.image" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -132,6 +135,41 @@ h4 {
 
   to {
     transform: translateX(-100%);
+  }
+}
+@media (min-width: 768px) and (max-height: 800px) {
+  .collection {
+    h1 {
+      font-size: 50px;
+    }
+    & > p {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    .collection-item {
+      width: 170px;
+      min-width: 170px;
+      height: 170px;
+    }
+    .member-info > div {
+      flex-direction: column;
+    }
+  }
+}
+@media (min-width: 768px) and (max-height: 600px) {
+  .collection {
+    h1 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    & > p {
+      max-width: 100%;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    .member-info > div {
+      flex-direction: column;
+    }
   }
 }
 </style>

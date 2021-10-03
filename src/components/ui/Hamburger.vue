@@ -3,6 +3,7 @@
     <div
       class="overlay"
       :class="{ expand: hamOpen }"
+      v-if="hamOpen"
       @click="hamOpen = false"
     ></div>
     <div
@@ -100,7 +101,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  height: 100vh;
   left: 0;
   background-color: rgba(219, 219, 219, 0);
   transition: background-color 0.5s ease-in-out;
@@ -120,7 +121,7 @@ export default {
   position: absolute;
   display: flex;
   background-color: #272727;
-  height: 100%;
+  height: 100vh;
   width: 224px;
   transition: transform 0.5s ease-in-out;
   transform: translate(100%);

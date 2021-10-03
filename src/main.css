@@ -26,9 +26,12 @@
 }
 
 .main-content {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 50px;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 164px;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 p {
@@ -36,19 +39,28 @@ p {
   font-size: 18px;
 }
 
-#myVideo {
-  position: fixed;
+.myVideo {
+  position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100vh;
   object-fit: cover;
   z-index: -1;
+  height: 100vh;
+  width: auto;
 }
-.main-content.router-content {
-  padding: 67px 100px;
-  min-height: calc(100vh - 172px);
+.main-content .router-content {
+  max-width: 1440px;
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  padding: 0 100px;
+  overflow: hidden;
+
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .appear {
   -webkit-animation: appear 2s ease-in;
@@ -59,6 +71,7 @@ p {
 
 h1 {
   font-size: 80px;
+  line-height: 1em;
 }
 
 @-webkit-keyframes appear {
@@ -107,10 +120,12 @@ h1 {
     display: none;
   }
   .main-content {
-    padding: 0 20px;
+    padding: 100px 0 0;
   }
-  .main-content.router-content {
-    padding: 24px;
-    min-height: calc(100vh - 129px);
+  .main-content .router-content {
+    padding: 20px;
   }
+}
+html {
+  scroll-behavior: smooth;
 }
