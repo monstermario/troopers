@@ -117,6 +117,7 @@ p {
 
   // margin: 0 -100px;
   @media (max-width: 767px) {
+    width: 100%;
     margin: 0 -20px;
   }
 }
