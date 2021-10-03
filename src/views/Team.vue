@@ -110,10 +110,11 @@ p {
   max-width: 840px;
 }
 .team-members {
-  width: 100%;
-  overflow: none;
+  width: 100vw;
+  overflow-y: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+
   margin: 0 -100px;
   @media (max-width: 767px) {
     margin: 0 -20px;
