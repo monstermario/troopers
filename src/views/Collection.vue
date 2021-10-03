@@ -20,7 +20,7 @@
         </p>
 
         <h4 class="mb-4 md:my-6">MINT PRICE: 0.1ETH</h4>
-        <div class="overflow-hidden flex">
+        <div class="collection-box overflow-hidden flex">
           <div class="collections flex">
             <div
               class="collection-item mx-2"
@@ -98,6 +98,12 @@ h4 {
   @media (max-width: 767px) {
     font-size: 10px;
     line-height: 24px;
+  }
+}
+.collection-box {
+  margin: 0 -100px;
+  @media (max-width: 767px) {
+    margin: 0 -20px;
   }
 }
 .collections {

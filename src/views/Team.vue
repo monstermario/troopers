@@ -111,10 +111,17 @@ p {
 }
 .team-members {
   width: 100%;
+  overflow: none;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 -100px;
+  @media (max-width: 767px) {
+    margin: 0 -20px;
+  }
 }
 .members {
   gap: 10px;
+  width: fit-content;
 }
 .member-item {
   min-width: 232px;
