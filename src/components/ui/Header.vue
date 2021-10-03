@@ -310,6 +310,11 @@ export default {
     background-position-x: calc(100% + 95px);
   }
 }
+@media (max-width: 850px) {
+  .nav a {
+    font-size: 16px;
+  }
+}
 @media (max-width: 767px) {
   .bg-slider {
     max-width: 100%;
