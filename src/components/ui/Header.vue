@@ -161,7 +161,7 @@ export default {
             window.scrollTo(0, 0);
           }
         } else if (event.deltaY > 0) {
-          let newUrl = Math.floor(window.scrollY / window.innerHeight) + 1;
+          let newUrl = Math.ceil(window.scrollY / window.innerHeight) + 1;
           if (newUrl < this.navs.length) {
             window.location.hash = this.navs[newUrl].url;
           }
