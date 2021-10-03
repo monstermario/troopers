@@ -1,10 +1,10 @@
 <template>
   <div class="main-content">
-    <video autoplay muted loop playsinline class="myVideo">
+    <video data-autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/home-loop-comp.mp4" type="video/mp4" />
     </video>
     <video
-      autoplay
+      data-autoplay
       playsinline
       muted
       @ended="firstVideo = false"

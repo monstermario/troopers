@@ -1,6 +1,6 @@
 <template>
   <div class="main-content">
-    <video autoplay muted loop playsinline class="myVideo">
+    <video data-autoplay muted loop class="myVideo">
       <source src="../assets/img/bg/team-loop-comp.mp4" type="video/mp4" />
     </video>
     <div class="router-content">
@@ -115,16 +115,18 @@ p {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 
-  margin: 0 -100px;
+  // margin: 0 -100px;
   @media (max-width: 767px) {
     margin: 0 -20px;
   }
 }
 .members {
-  gap: 10px;
   width: fit-content;
 }
 .member-item {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
   min-width: 232px;
 
   .member-avatar {
