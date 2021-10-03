@@ -1,11 +1,11 @@
 <template>
   <div class="scroll">
-    <full-page ref="fullpage" :options="options" id="fullpage">
-      <div class="section"><Home /></div>
-      <div class="section"><Team /></div>
-      <div class="section"><Storyline /></div>
-      <div class="section"><Collection /></div>
-    </full-page>
+    <!-- <full-page ref="fullpage" :options="options" id="fullpage"> -->
+    <div class="section"><Home /></div>
+    <div class="section"><Team /></div>
+    <div class="section"><Storyline /></div>
+    <div class="section"><Collection /></div>
+    <!-- </full-page> -->
   </div>
 </template>
 
