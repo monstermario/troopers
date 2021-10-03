@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="teasm">
+  <div class="main-content">
     <video autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/team-loop-comp.mp4" type="video/mp4" />
     </video>

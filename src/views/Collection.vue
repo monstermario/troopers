@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="cosllection">
+  <div class="main-content">
     <video autoplay muted playsinline loop class="myVideo">
       <source
         src="../assets/img/bg/collection-loop-comp.mp4"

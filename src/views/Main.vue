@@ -6,15 +6,10 @@
       <div class="section"><Storyline /></div>
       <div class="section"><Collection /></div>
     </full-page>
-    <!-- <Home />
-    <Team />
-    <Storyline />
-    <Collection /> -->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Home from "./Home.vue";
 import Storyline from "./Storyline.vue";
 import Team from "./Team.vue";

@@ -17,15 +17,6 @@
             <router-link to="/">ET</router-link>
 
             <Hamburger />
-            <!-- <a href="#" class="md:hidden">
-            <svg width="18" height="20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0 17.067V20h18v-2.933H0zm4.5-8.534v2.934H18V8.533H4.5zM0 0v2.933h18V0H0z"
-                fill="#FFF"
-                fill-rule="nonzero"
-              />
-            </svg>
-          </a> -->
           </h3>
           <div class="nav w-full md:ml-4 md:pr-20 flex justify-end">
             <div class="flex justify-end hidden md:block">
@@ -94,8 +85,6 @@
 </template>
 
 <script>
-// import WalletConnectProvider from "@walletconnect/web3-provider";
-// import Web3 from "web3";
 import * as MetaMask from "@/utils/MetaMask.js";
 import Hamburger from "./Hamburger.vue";
 
@@ -152,8 +141,7 @@ export default {
       return this.$store.state.userAddress;
     },
     getRoute: function () {
-      console.log(this.$route.hash);
-      return this.$route.hash;
+      return this.$route.hash === "" ? "#home" : this.$route.hash;
     },
   },
 };

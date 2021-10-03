@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="storsyline">
+  <div class="main-content">
     <video autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/storyline-loop-comp.mp4" type="video/mp4" />
     </video>

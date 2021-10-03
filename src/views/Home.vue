@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="hsome">
+  <div class="main-content">
     <video autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/home-loop-comp.mp4" type="video/mp4" />
     </video>
@@ -109,14 +109,10 @@ export default {
   methods: {
     async connectMetaMask() {
       try {
-        // if (this.isMetaMaskInstalled) {
         this.userAddress = await MetaMask.getUserAccount();
         await MetaMask.loadWeb3();
         this.userAddress = await MetaMask.getUserAccount();
         this.$store.commit("setAddress", this.userAddress);
-        // } else {
-        //   console.log("install metamask");
-        // }
       } catch (err) {
         console.log(err);
       }
