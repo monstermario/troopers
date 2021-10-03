@@ -29,6 +29,7 @@ export default {
         licenseKey: "YOUR_KEY_HEERE",
         menu: "#menu",
         anchors: ["home", "team", "storyline", "collection"],
+        scrollingSpeed: 1300,
       },
     };
   },
