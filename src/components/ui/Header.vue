@@ -145,30 +145,6 @@ export default {
     getMiniAddress(address) {
       return MetaMask.makeMiniAddress(address);
     },
-    handleWheel(event) {
-      if (this.isScrolling) {
-        this.isScrolling = false;
-        setTimeout(() => {
-          this.isScrolling = true;
-        }, 500);
-        if (event.deltaY < 0) {
-          let newUrl = Math.floor(window.scrollY / window.innerHeight) - 1;
-          if (newUrl > 0) {
-            window.location.hash = this.navs[newUrl].url;
-            window.scrollTo(0, newUrl * window.innerHeight);
-          } else {
-            window.location.hash = "#home";
-            window.scrollTo(0, 0);
-          }
-        } else if (event.deltaY > 0) {
-          let newUrl = Math.ceil(window.scrollY / window.innerHeight) + 1;
-          if (newUrl < this.navs.length) {
-            window.location.hash = this.navs[newUrl].url;
-          }
-          window.scrollTo(0, newUrl * window.innerHeight);
-        }
-      }
-    },
   },
   computed: {
     isMetaMaskInstalled: () => MetaMask.isMetaMaskInstalled(),

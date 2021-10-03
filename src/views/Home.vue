@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="home">
+  <div class="main-content" id="hsome">
     <video autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/home-loop-comp.mp4" type="video/mp4" />
     </video>

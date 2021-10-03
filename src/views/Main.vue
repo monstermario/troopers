@@ -1,9 +1,15 @@
 <template>
   <div class="scroll">
-    <Home />
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section"><Home /></div>
+      <div class="section"><Team /></div>
+      <div class="section"><Storyline /></div>
+      <div class="section"><Collection /></div>
+    </full-page>
+    <!-- <Home />
     <Team />
     <Storyline />
-    <Collection />
+    <Collection /> -->
   </div>
 </template>
 
@@ -18,7 +24,13 @@ export default {
   name: "Main",
   components: { Home, Team, Storyline, Collection },
   data() {
-    return {};
+    return {
+      options: {
+        licenseKey: "YOUR_KEY_HEERE",
+        menu: "#menu",
+        anchors: ["home", "team", "storyline", "collection"],
+      },
+    };
   },
 };
 </script>

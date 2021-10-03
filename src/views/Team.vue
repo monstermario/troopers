@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content" id="team">
+  <div class="main-content" id="teasm">
     <video autoplay muted loop playsinline class="myVideo">
       <source src="../assets/img/bg/team-loop-comp.mp4" type="video/mp4" />
     </video>
@@ -148,6 +148,7 @@ p {
   .home {
     h1 {
       font-size: 50px;
+      margin-bottom: 15px;
     }
     & > p {
       max-width: 100%;
